@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thilina Dilshan — BIM Specialist & Creative Visual Producer</title>
+  <meta name="description" content="Portfolio of Thilina Dilshan — Building Information Modeling (BIM), Structural & Architectural Revit Modeling, Digital Media, Videography, and Photography." />
+  <meta property="og:title" content="Thilina Dilshan — BIM & Creative Media Portfolio" />
+  <meta property="og:description" content="Showcasing multidisciplinary work across BIM & 3D Modeling, Videography, Photography, and Digital Media." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root {
+      --bg-primary: #0a0e17;
+      --bg-secondary: #111827;
+      --bg-card: rgba(17, 24, 39, 0.78);
+      --bg-glass: rgba(15, 23, 42, 0.75);
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --accent-bim: #38bdf8;
+      --accent-media: #f59e0b;
+      --accent-grad: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #f59e0b 100%);
+      --border-color: rgba(148, 163, 184, 0.14);
+      --border-hover: rgba(56, 189, 248, 0.45);
+      --shadow-lg: 0 20px 45px -15px rgba(0, 0, 0, 0.6);
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    }
+
+    [data-theme="light"] {
+      --bg-primary: #f8fafc;
+      --bg-secondary: #f1f5f9;
+      --bg-card: rgba(255, 255, 255, 0.9);
+      --bg-glass: rgba(255, 255, 255, 0.85);
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --accent-bim: #0284c7;
+      --accent-media: #d97706;
+      --border-color: rgba(15, 23, 42, 0.1);
+      --border-hover: rgba(2, 132, 199, 0.45);
+      --shadow-lg: 0 20px 40px -15px rgba(15, 23, 42, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Subtle architectural grid background */
+    .bg-grid {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background-image: 
+        linear-gradient(to right, rgba(148, 163, 184, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(148, 163, 184, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+
+    .bg-glow {
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      filter: blur(130px);
+      opacity: 0.14;
+      pointer-events: none;
+      z-index: -1;
+    }
+    .glow-1 {
+      top: -150px;
+      left: -100px;
+      background: #38bdf8;
+    }
+    .glow-2 {
+      bottom: -150px;
+      right: -100px;
+      background: #f59e0b;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: var(--bg-glass);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 74px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--accent-grad);
+      display: grid;
+      place-items: center;
+      color: #0f172a;
+      font-weight: 900;
+      font-size: 0.95rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-card);
+      color: var(--text-primary);
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .btn-icon:hover {
+      border-color: var(--accent-bim);
+      transform: translateY(-1px);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.22s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--accent-grad);
+      color: #0f172a;
+      box-shadow: 0 8px 25px -6px rgba(56, 189, 248, 0.45);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px -6px rgba(245, 158, 11, 0.5);
+    }
+
+    .btn-outline {
+      background: var(--bg-card);
+      color: var(--text-primary);
+      border-color: var(--border-color);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent-bim);
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 84px 0 64px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .discipline-pills {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .pill {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-card);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pill.bim {
+      color: var(--accent-bim);
+      border-color: rgba(56, 189, 248, 0.3);
+    }
+
+    .pill.media {
+      color: var(--accent-media);
+      border-color: rgba(245, 158, 11, 0.3);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+
+    .gradient-text {
+      background: var(--accent-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 580px;
+      margin-bottom: 32px;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .stat-item h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--text-primary);
+    }
+
+    .stat-item span {
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+    }
+
+    /* Interactive Dual Showcase Card in Hero */
+    .hero-visual {
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+
+    .visual-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .window-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .window-dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .dot-r { background: #ef4444; }
+    .dot-y { background: #f59e0b; }
+    .dot-g { background: #10b981; }
+
+    .mode-switch {
+      display: flex;
+      background: var(--bg-secondary);
+      border-radius: 8px;
+      padding: 3px;
+      border: 1px solid var(--border-color);
+    }
+
+    .mode-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .mode-btn.active {
+      background: var(--bg-card);
+      color: var(--text-primary);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+
+    #interactiveCanvas {
+      width: 100%;
+      height: 300px;
+      border-radius: 12px;
+      background: radial-gradient(circle at center, rgba(30, 41, 59, 0.7), rgba(10, 14, 23, 0.95));
+      display: block;
+      cursor: grab;
+    }
+
+    .canvas-caption {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      font-family: var(--font-mono);
+    }
+
+    /* Section Styling */
+    section {
+      padding: 72px 0;
+    }
+
+    .section-header {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 42px;
+    }
+
+    .section-eyebrow {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-bim);
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .section-desc {
+      color: var(--text-secondary);
+      max-width: 650px;
+    }
+
+    /* Core Pillars (4-column grid) */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .pillar-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 26px;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-hover);
+    }
+
+    .pillar-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      font-size: 1.35rem;
+    }
+
+    .pillar-icon.bim-icon {
+      background: rgba(56, 189, 248, 0.14);
+      color: var(--accent-bim);
+    }
+
+    .pillar-icon.media-icon {
+      background: rgba(245, 158, 11, 0.14);
+      color: var(--accent-media);
+    }
+
+    .pillar-card h3 {
+      font-size: 1.18rem;
+      margin-bottom: 10px;
+    }
+
+    .pillar-card p {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      font-size: 0.74rem;
+      padding: 4px 9px;
+      border-radius: 6px;
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      font-family: var(--font-mono);
+    }
+
+    /* Filterable Portfolio Grid */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+
+    .filter-btn {
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-card);
+      color: var(--text-secondary);
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--text-primary);
+      color: var(--bg-primary);
+      border-color: var(--text-primary);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 24px;
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      cursor: pointer;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .project-thumb {
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .thumb-bim-1 {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #0284c7 100%);
+    }
+    .thumb-bim-2 {
+      background: linear-gradient(135deg, #064e3b 0%, #0f766e 60%, #38bdf8 100%);
+    }
+    .thumb-bim-3 {
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 60%, #6366f1 100%);
+    }
+    .thumb-video {
+      background: linear-gradient(135deg, #451a03 0%, #9a3412 60%, #f59e0b 100%);
+    }
+    .thumb-photo {
+      background: linear-gradient(135deg, #18181b 0%, #3f3f46 60%, #e4e4e7 100%);
+    }
+    .thumb-digital {
+      background: linear-gradient(135deg, #3b0764 0%, #7e22ce 60%, #ec4899 100%);
+    }
+
+    .project-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: rgba(10, 14, 23, 0.78);
+      color: #fff;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .project-body {
+      padding: 22px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-body h3 {
+      font-size: 1.16rem;
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+
+    .project-body p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+    }
+
+    .project-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--accent-bim);
+    }
+
+    /* Skills & Software Matrix */
+    .skills-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .skill-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 28px;
+    }
+
+    .skill-box h3 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .skill-row {
+      margin-bottom: 16px;
+    }
+
+    .skill-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .skill-bar {
+      height: 8px;
+      background: var(--bg-secondary);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .skill-fill {
+      height: 100%;
+      border-radius: 999px;
+    }
+
+    .fill-bim {
+      background: linear-gradient(90deg, #0284c7, #38bdf8);
+    }
+
+    .fill-media {
+      background: linear-gradient(90deg, #d97706, #fbbf24);
+    }
+
+    /* Social Bio & Contact Section */
+    .social-hub {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .social-links-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .social-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+
+    .social-card:hover {
+      border-color: var(--accent-bim);
+      transform: translateY(-2px);
+    }
+
+    .social-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: var(--bg-card);
+      font-weight: 800;
+      font-size: 0.85rem;
+    }
+
+    /* Modal for Project Inspection */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 6, 23, 0.82);
+      backdrop-filter: blur(8px);
+      display: none;
+      place-items: center;
+      z-index: 200;
+      padding: 20px;
+    }
+
+    .modal-backdrop.open {
+      display: grid;
+    }
+
+    .modal-content {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      max-width: 680px;
+      width: 100%;
+      padding: 32px;
+      position: relative;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    .modal-highlights {
+      margin: 18px 0;
+      padding-left: 20px;
+      color: var(--text-secondary);
+      font-size: 0.94rem;
+    }
+
+    .modal-highlights li {
+      margin-bottom: 8px;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 36px 0;
+      margin-top: 40px;
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 920px) {
+      .hero,
+      .skills-container,
+      .social-hub {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .social-links-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-bar">
+      <a href="#" class="logo">
+        <span class="logo-mark">TD</span>
+        <span>Thilina Dilshan</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#disciplines">What I Do</a></li>
+        <li><a href="#portfolio">Featured Work</a></li>
+        <li><a href="#skills">Tools & Skills</a></li>
+        <li><a href="#connect">Social & Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-icon" id="themeToggle" title="Switch Dark/Light Theme" aria-label="Toggle Theme">
+          ☀️
+        </button>
+        <a href="#connect" class="btn btn-primary">Let's Collaborate</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="container">
+    <section class="hero">
+      <div>
+        <div class="discipline-pills">
+          <span class="pill bim">🏗️ BIM & 3D Modeling</span>
+          <span class="pill media">🎬 Videography & Photography</span>
+          <span class="pill media">⚡ Digital Media</span>
+        </div>
+        <h1>
+          Engineering Precision Meets <span class="gradient-text">Visual Storytelling.</span>
+        </h1>
+        <p>
+          Hi, I'm <strong>Thilina Dilshan</strong> — a multidisciplinary creator bridging Building Information Modeling (Revit, parametric structural & architectural workflows) with high-impact digital media, commercial videography, and photography.
+        </p>
+        <div class="hero-cta">
+          <a href="#portfolio" class="btn btn-primary">Explore My Work →</a>
+          <a href="mailto:thepromptroom2001@gmail.com" class="btn btn-outline">✉️ Email Me</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3>BIM & CAD</h3>
+            <span>Revit · Parametric · RC Carbon</span>
+          </div>
+          <div class="stat-item">
+            <h3>Visual Media</h3>
+            <span>Video Reels · Event & Studio Photo</span>
+          </div>
+          <div class="stat-item">
+            <h3>Automation</h3>
+            <span>Python 3D & Digital Workflows</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Visualizer Widget -->
+      <div class="hero-visual">
+        <div class="visual-header">
+          <div class="window-dots">
+            <span class="dot-r"></span>
+            <span class="dot-y"></span>
+            <span class="dot-g"></span>
+          </div>
+          <div class="mode-switch">
+            <button class="mode-btn active" data-mode="bim">3D BIM Wireframe</button>
+            <button class="mode-btn" data-mode="lens">Cinema Viewfinder</button>
+          </div>
+        </div>
+        <canvas id="interactiveCanvas" width="520" height="300"></canvas>
+        <div class="canvas-caption">
+          <span id="canvasStatus">MODE: REVIT PARAMETRIC MODEL [INTERACTIVE]</span>
+          <span>DRAG / MOVE CURSOR</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Pillars -->
+    <section id="disciplines">
+      <div class="section-header">
+        <span class="section-eyebrow">Multidisciplinary Capabilities</span>
+        <h2 class="section-title">One Portfolio. Four Core Disciplines.</h2>
+        <p class="section-desc">
+          Whether modeling complex reinforced concrete structures in Revit or producing cinematic promotional campaigns, I bring technical rigor and creative polish to every project.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-icon bim-icon">🏛️</div>
+          <h3>BIM & Structural Modeling</h3>
+          <p>
+            Architectural and structural 3D modeling, custom parametric Revit families (<code>.rfa</code>), multi-discipline coordination (<code>.rvt</code>), and embodied carbon analysis.
+          </p>
+          <div class="tag-list">
+            <span class="tag">Autodesk Revit</span>
+            <span class="tag">Autodesk Viewer</span>
+            <span class="tag">Eurocode</span>
+            <span class="tag">BIMobject</span>
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon media-icon">🎥</div>
+          <h3>Videography & Motion</h3>
+          <p>
+            Commercial and event videography, high-retention 10s–20s promotional video packages, dynamic editing, color grading, and sound design for social platforms.
+          </p>
+          <div class="tag-list">
+            <span class="tag">Promo Reels</span>
+            <span class="tag">Event Coverage</span>
+            <span class="tag">Color Grading</span>
+            <span class="tag">Storyboarding</span>
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon media-icon">📸</div>
+          <h3>Photography & Retouching</h3>
+          <p>
+            Architectural framing, live event documentation, portrait sessions, and high-dynamic-range post-processing tailored for brand identity and editorial use.
+          </p>
+          <div class="tag-list">
+            <span class="tag">Architectural</span>
+            <span class="tag">Event & Lifestyle</span>
+            <span class="tag">RAW Grading</span>
+            <span class="tag">Lighting</span>
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon bim-icon">🚀</div>
+          <h3>Digital Media & Automation</h3>
+          <p>
+            Digital marketing proposals, sponsorship media kits, AI-powered creative workflows, and Python-based automation for 3D drawing and quotation systems.
+          </p>
+          <div class="tag-list">
+            <span class="tag">Campaign Strategy</span>
+            <span class="tag">Python Automation</span>
+            <span class="tag">Gemini API</span>
+            <span class="tag">Brand Kits</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="portfolio">
+      <div class="section-header">
+        <span class="section-eyebrow">Selected Works</span>
+        <h2 class="section-title">Featured Projects & Case Studies</h2>
+        <p class="section-desc">
+          Filter by discipline below or click any project card to inspect the workflow, tools, and deliverables.
+        </p>
+      </div>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Work (6)</button>
+        <button class="filter-btn" data-filter="bim">BIM & Engineering (3)</button>
+        <button class="filter-btn" data-filter="video">Videography (1)</button>
+        <button class="filter-btn" data-filter="photo">Photography (1)</button>
+        <button class="filter-btn" data-filter="digital">Digital Media (1)</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Project 1 -->
+        <article class="project-card" data-category="bim" data-index="0">
+          <div class="project-thumb thumb-bim-1">
+            <span class="project-badge">BIM & Sustainability</span>
+            <svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.4">
+              <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M9 9h.01M15 9h.01M9 12h.01M15 12h.01"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div>
+              <h3>BIM-Based Parametric Study of Embodied Carbon in RC Structures</h3>
+              <p>Coordinated Revit parametric modeling and structural design checks evaluating concrete mixes, member dimensions, and embodied carbon reduction.</p>
+            </div>
+            <div class="project-footer">
+              <span>Revit · Structural · Carbon Analysis</span>
+              <span>View Details →</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card" data-category="bim" data-index="1">
+          <div class="project-thumb thumb-bim-2">
+            <span class="project-badge">3D Architectural & Structural</span>
+            <svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.4">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+              <polyline points="2 17 12 22 22 17"/>
+              <polyline points="2 12 12 17 22 12"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div>
+              <h3>Multi-Discipline Revit Modeling & Custom Parametric Families</h3>
+              <p>Development and coordination of architectural and structural models (UPTOWN AR & Structural series) with reusable parametric <code>.rfa</code> components.</p>
+            </div>
+            <div class="project-footer">
+              <span>Revit (.rvt / .rfa) · Autodesk Viewer</span>
+              <span>View Details →</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card" data-category="video" data-index="2">
+          <div class="project-thumb thumb-video">
+            <span class="project-badge">Videography</span>
+            <svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.4">
+              <rect x="2" y="4" width="15" height="16" rx="2"/>
+              <polygon points="17 9 22 6 22 18 17 15 17 9"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div>
+              <h3>Short-Form Event & Brand Promotional Video Packages</h3>
+              <p>High-impact 10-second, 15-second, and 20-second promotional video productions crafted for event sponsors, social reels, and digital campaigns.</p>
+            </div>
+            <div class="project-footer">
+              <span>Cinematography · Editing · Motion</span>
+              <span>View Details →</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card" data-category="digital" data-index="3">
+          <div class="project-thumb thumb-digital">
+            <span class="project-badge">Digital Media Strategy</span>
+            <svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.4">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div>
+              <h3>Cluster Annual Gathering — Digital Media & Sponsorship Campaign</h3>
+              <p>Digital marketing proposal and tiered video sponsorship architecture connecting 300+ engineering students, alumni, and industry partners.</p>
+            </div>
+            <div class="project-footer">
+              <span>Media Kits · Ad Strategy · Visual Design</span>
+              <span>View Details →</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card" data-category="photo" data-index="4">
+          <div class="project-thumb thumb-photo">
+            <span class="project-badge">Photography</span>
+            <svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.4">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="13" r="4"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div>
+              <h3>Architectural, Built-Environment & Event Photography Series</h3>
+              <p>Visual documentation of spatial geometry, structural forms, and live cultural/academic gatherings with custom color profiles.</p>
+            </div>
+            <div class="project-footer">
+              <span>Exterior/Interior · Event · Color Grading</span>
+              <span>View Details →</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="project-card" data-category="bim" data-index="5">
+          <div class="project-thumb thumb-bim-3">
+            <span class="project-badge">BIM Automation</span>
+            <svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.4">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div>
+              <h3>Automated 3D Modeling & Construction Quotation Workflows</h3>
+              <p>Integrating Python automation with 3D building models, regional construction rules, and component pricing estimation.</p>
+            </div>
+            <div class="project-footer">
+              <span>Python · 3D Automation · Cost Takeoffs</span>
+              <span>View Details →</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills Matrix -->
+    <section id="skills">
+      <div class="section-header">
+        <span class="section-eyebrow">Technical & Creative Stack</span>
+        <h2 class="section-title">Software, Workflows & Capabilities</h2>
+      </div>
+
+      <div class="skills-container">
+        <div class="skill-box">
+          <h3>🏗️ BIM, CAD & Engineering Stack</h3>
+          <div class="skill-row">
+            <div class="skill-meta"><span>Autodesk Revit (Architecture & Structure)</span><span>Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill fill-bim" style="width: 94%"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span>Parametric Families (.rfa) & Quantity Takeoffs</span><span>Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill fill-bim" style="width: 90%"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span>Embodied Carbon & Structural Design Checks (Eurocode)</span><span>Proficient</span></div>
+            <div class="skill-bar"><div class="skill-fill fill-bim" style="width: 86%"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span>Python Automation & AI-Assisted Workflows</span><span>Proficient</span></div>
+            <div class="skill-bar"><div class="skill-fill fill-bim" style="width: 82%"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <h3>🎬 Digital Media, Video & Photo Stack</h3>
+          <div class="skill-row">
+            <div class="skill-meta"><span>Videography, Commercial Cuts & Short-Form Reels</span><span>Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill fill-media" style="width: 92%"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span>Photography (Architectural, Event & Portrait)</span><span>Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill fill-media" style="width: 90%"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span>Color Grading, Retouching & Visual Design (Canva / Adobe)</span><span>Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill fill-media" style="width: 88%"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta"><span>Digital Marketing Proposals & Social Strategy</span><span>Proficient</span></div>
+            <div class="skill-bar"><div class="skill-fill fill-media" style="width: 85%"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Link-in-Bio & Contact Hub -->
+    <section id="connect">
+      <div class="social-hub">
+        <div>
+          <span class="section-eyebrow">Link-in-Bio & Inquiries</span>
+          <h2 class="section-title" style="margin: 8px 0 14px;">Ready for Your Next BIM Project or Creative Shoot?</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 24px;">
+            Available for freelance BIM modeling, Revit family creation, promotional videography, event photography, and digital media campaigns in Sri Lanka and remotely worldwide.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+            <a href="mailto:thepromptroom2001@gmail.com?subject=Portfolio%20Inquiry%20—%20Thilina%20Dilshan" class="btn btn-primary">
+              ✉️ thepromptroom2001@gmail.com
+            </a>
+            <button class="btn btn-outline" id="copyBioLinkBtn">
+              🔗 Copy Page URL for Social Bio
+            </button>
+          </div>
+        </div>
+
+        <div class="social-links-grid">
+          <a href="mailto:thepromptroom2001@gmail.com?subject=LinkedIn%20Connection%20—%20Thilina%20Dilshan" class="social-card">
+            <span class="social-icon" style="color: #38bdf8;">in</span>
+            <div>
+              <div>LinkedIn</div>
+              <small style="color: var(--text-secondary); font-weight: 400;">Thilina Dilshan</small>
+            </div>
+          </a>
+          <a href="mailto:thepromptroom2001@gmail.com?subject=Instagram%20Reel%20Inquiry%20—%20Thilina%20Dilshan" class="social-card">
+            <span class="social-icon" style="color: #f43f5e;">IG</span>
+            <div>
+              <div>Instagram</div>
+              <small style="color: var(--text-secondary); font-weight: 400;">Photo & Video Reels</small>
+            </div>
+          </a>
+          <a href="mailto:thepromptroom2001@gmail.com?subject=Showreel%20Request%20—%20Thilina%20Dilshan" class="social-card">
+            <span class="social-icon" style="color: #ef4444;">▶</span>
+            <div>
+              <div>YouTube / Showreel</div>
+              <small style="color: var(--text-secondary); font-weight: 400;">Videography & BIM</small>
+            </div>
+          </a>
+          <a href="mailto:thepromptroom2001@gmail.com?subject=Visual%20Portfolio%20Inquiry%20—%20Thilina%20Dilshan" class="social-card">
+            <span class="social-icon" style="color: #f59e0b;">Be</span>
+            <div>
+              <div>Behance / Gallery</div>
+              <small style="color: var(--text-secondary); font-weight: 400;">Visual Case Studies</small>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Detail Modal -->
+  <div class="modal-backdrop" id="projectModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Close modal">✕</button>
+      <span class="section-eyebrow" id="modalCategory">CATEGORY</span>
+      <h3 style="font-size: 1.5rem; margin: 6px 0 12px;" id="modalTitle">Project Title</h3>
+      <p style="color: var(--text-secondary);" id="modalDesc"></p>
+      <ul class="modal-highlights" id="modalBullets"></ul>
+      <div class="tag-list" id="modalTags" style="margin-top: 18px;"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="yearSpan">2026</span> <strong>Thilina Dilshan</strong>. Built for fast global edge hosting on Vercel.</div>
+      <div>BIM Modeling · Digital Media · Videography · Photography · Sri Lanka</div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      themeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+
+    // Copy bio URL helper
+    const copyBtn = document.getElementById('copyBioLinkBtn');
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard?.writeText(window.location.href);
+      const original = copyBtn.textContent;
+      copyBtn.textContent = '✅ Link Copied!';
+      setTimeout(() => { copyBtn.textContent = original; }, 2000);
+    });
+
+    // Category filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+        projectCards.forEach(card => {
+          const match = filter === 'all' || card.getAttribute('data-category') === filter;
+          card.style.display = match ? 'flex' : 'none';
+        });
+      });
+    });
+
+    // Modal data
+    const projectDetails = [
+      {
+        category: 'BIM & Structural Sustainability',
+        title: 'BIM-Based Parametric Study of Embodied Carbon in RC Structures',
+        desc: 'A coordinated workflow linking laboratory material metrics, Autodesk Revit parametric modeling, and Eurocode structural design checks to minimize embodied carbon early in design.',
+        bullets: [
+          'Developed reusable parametric Revit models comparing concrete mixes and structural member dimensions.',
+          'Automated material quantity takeoffs and study-specific embodied carbon calculations.',
+          'Screened structural options against strength and stability requirements.'
+        ],
+        tags: ['Autodesk Revit', 'Parametric BIM', 'Embodied Carbon', 'Eurocode', 'Reinforced Concrete']
+      },
+      {
+        category: '3D BIM Coordination',
+        title: 'Multi-Discipline Revit Modeling & Custom Parametric Families',
+        desc: 'Full-scale architectural and structural modeling (.rvt) paired with custom parametric families (.rfa) and cloud model review via Autodesk Viewer.',
+        bullets: [
+          'Built coordinated architectural (UPTOWN_AR) and structural (UPTOWN_Stru) Revit models.',
+          'Created and integrated modular parametric .rfa families for rapid design iteration.',
+          'Configured web-accessible 3D model inspection through Autodesk Viewer for stakeholders.'
+        ],
+        tags: ['Revit Architecture', 'Revit Structure', '.rvt & .rfa', 'Autodesk Viewer', 'BIMobject']
+      },
+      {
+        category: 'Commercial & Event Videography',
+        title: 'Short-Form Event & Brand Promotional Video Packages',
+        desc: 'End-to-end production of punchy 10-second, 15-second, and 20-second promotional video spots tailored for social media reach and event sponsorship visibility.',
+        bullets: [
+          'Concept development, camera operation, and dynamic multi-angle coverage.',
+          'Fast-paced rhythm editing, motion graphics titles, and custom color grading.',
+          'Optimized vertical (9:16) and widescreen (16:9) deliverables for LinkedIn, Instagram, and YouTube.'
+        ],
+        tags: ['Videography', '10s/15s/20s Spots', 'Color Grading', 'Social Reels', 'Sound Design']
+      },
+      {
+        category: 'Digital Media & Campaigns',
+        title: 'Cluster Annual Gathering — Digital Media & Sponsorship Campaign',
+        desc: 'Comprehensive digital marketing proposal and visual sponsorship system designed for a 300+ attendee engineering & industry networking gathering.',
+        bullets: [
+          'Structured tiered promotional video packages to maximize sponsor visibility and ROI.',
+          'Designed cohesive pitch decks and digital media assets for corporate outreach.',
+          'Aligned event branding across student, alumni, and construction industry channels.'
+        ],
+        tags: ['Digital Marketing', 'Sponsorship Deck', 'Media Strategy', 'Visual Identity']
+      },
+      {
+        category: 'Photography & Visual Arts',
+        title: 'Architectural, Built-Environment & Event Photography Series',
+        desc: 'High-impact photography highlighting geometric lines in architecture alongside candid storytelling at live events.',
+        bullets: [
+          'Perspective-corrected architectural and structural progress photography.',
+          'Low-light live event coverage capturing keynote speakers, performances, and crowd energy.',
+          'Consistent RAW color grading and skin-tone calibration.'
+        ],
+        tags: ['Architectural Photo', 'Event Coverage', 'RAW Post-Processing', 'Lighting']
+      },
+      {
+        category: 'Construction Tech & Automation',
+        title: 'Automated 3D Modeling & Construction Quotation Workflows',
+        desc: 'Exploring Python-driven automation for generating 3D building models, checking regional building codes, and automating component pricing.',
+        bullets: [
+          'Prototyped scripts to automate 3D building drawings and parametric element generation.',
+          'Evaluated environmental and regional regulatory rule integration.',
+          'Linked modeled building elements to standardized component quotation mechanisms.'
+        ],
+        tags: ['Python', 'BIM Automation', 'Quantity Takeoff', 'Generative Workflows']
+      }
+    ];
+
+    const modal = document.getElementById('projectModal');
+    const modalClose = document.getElementById('modalClose');
+    projectCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const idx = Number(card.getAttribute('data-index'));
+        const item = projectDetails[idx];
+        document.getElementById('modalCategory').textContent = item.category;
+        document.getElementById('modalTitle').textContent = item.title;
+        document.getElementById('modalDesc').textContent = item.desc;
+        const ul = document.getElementById('modalBullets');
+        ul.innerHTML = item.bullets.map(b => `<li>${b}</li>`).join('');
+        const tags = document.getElementById('modalTags');
+        tags.innerHTML = item.tags.map(t => `<span class="tag">${t}</span>`).join('');
+        modal.classList.add('open');
+      });
+    });
+
+    modalClose.addEventListener('click', () => modal.classList.remove('open'));
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) modal.classList.remove('open');
+    });
+
+    // Interactive Hero Canvas (3D BIM Wireframe + Cinema Viewfinder)
+    const canvas = document.getElementById('interactiveCanvas');
+    const ctx = canvas.getContext('2d');
+    const statusEl = document.getElementById('canvasStatus');
+    let visualMode = 'bim';
+    let angleX = 0.35;
+    let angleY = 0.55;
+    let targetAngleY = 0.55;
+    let targetAngleX = 0.35;
+
+    document.querySelectorAll('.mode-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        visualMode = btn.getAttribute('data-mode');
+        statusEl.textContent = visualMode === 'bim'
+          ? 'MODE: REVIT PARAMETRIC MODEL [INTERACTIVE]'
+          : 'MODE: 4K 60FPS CINEMA VIEWFINDER [LIVE]';
+      });
+    });
+
+    canvas.addEventListener('mousemove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      const nx = (e.clientX - rect.left) / rect.width - 0.5;
+      const ny = (e.clientY - rect.top) / rect.height - 0.5;
+      targetAngleY = nx * 2.2;
+      targetAngleX = ny * 1.2 + 0.3;
+    });
+
+    function project3D(x, y, z, w, h) {
+      // Rotate Y
+      const cosY = Math.cos(angleY), sinY = Math.sin(angleY);
+      let x1 = x * cosY - z * sinY;
+      let z1 = z * cosY + x * sinY;
+      // Rotate X
+      const cosX = Math.cos(angleX), sinX = Math.sin(angleX);
+      let y2 = y * cosX - z1 * sinX;
+      let z2 = z1 * cosX + y * sinX;
+      const fov = 260 / (260 + z2 + 180);
+      return [w / 2 + x1 * fov, h / 2 + y2 * fov];
+    }
+
+    function drawFrame(time) {
+      const w = canvas.width;
+      const h = canvas.height;
+      ctx.clearRect(0, 0, w, h);
+
+      angleY += (targetAngleY - angleY) * 0.06 + 0.004;
+      angleX += (targetAngleX - angleX) * 0.06;
+
+      if (visualMode === 'bim') {
+        // Draw multi-story parametric structural bay wireframe
+        ctx.strokeStyle = 'rgba(56, 189, 248, 0.78)';
+        ctx.lineWidth = 1.4;
+        const levels = [-65, -15, 35, 85];
+        const cols = [
+          [-75, -55], [0, -55], [75, -55],
+          [-75, 55],  [0, 55],  [75, 55]
+        ];
+
+        // Columns
+        cols.forEach(([cx, cz]) => {
+          const pTop = project3D(cx, levels[0], cz, w, h);
+          const pBot = project3D(cx, levels[levels.length - 1], cz, w, h);
+          ctx.beginPath();
+          ctx.moveTo(pTop[0], pTop[1]);
+          ctx.lineTo(pBot[0], pBot[1]);
+          ctx.stroke();
+        });
+
+        // Floor slabs & beams
+        levels.forEach((ly, idx) => {
+          ctx.strokeStyle = idx === 0 ? 'rgba(245, 158, 11, 0.85)' : 'rgba(56, 189, 248, 0.65)';
+          const corners = [
+            project3D(-75, ly, -55, w, h),
+            project3D(75, ly, -55, w, h),
+            project3D(75, ly, 55, w, h),
+            project3D(-75, ly, 55, w, h)
+          ];
+          ctx.beginPath();
+          corners.forEach((pt, i) => i === 0 ? ctx.moveTo(pt[0], pt[1]) : ctx.lineTo(pt[0], pt[1]));
+          ctx.closePath();
+          ctx.stroke();
+
+          // Mid-span beam
+          const m1 = project3D(0, ly, -55, w, h);
+          const m2 = project3D(0, ly, 55, w, h);
+          ctx.beginPath();
+          ctx.moveTo(m1[0], m1[1]);
+          ctx.lineTo(m2[0], m2[1]);
+          ctx.stroke();
+        });
+
+        // HUD telemetry
+        ctx.fillStyle = '#38bdf8';
+        ctx.font = '11px monospace';
+        ctx.fillText('LOD 350 · RC FRAME', 16, 26);
+        ctx.fillText('PARAMETRIC RC WORKFLOW', 16, 42);
+      } else {
+        // Cinema Viewfinder & Rule-of-Thirds HUD
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(w / 3, 20); ctx.lineTo(w / 3, h - 20);
+        ctx.moveTo((2 * w) / 3, 20); ctx.lineTo((2 * w) / 3, h - 20);
+        ctx.moveTo(20, h / 3); ctx.lineTo(w - 20, h / 3);
+        ctx.moveTo(20, (2 * h) / 3); ctx.lineTo(w - 20, (2 * h) / 3);
+        ctx.stroke();
+
+        // Animated Aperture / Focus Target
+        const cx = w / 2 + Math.sin(time * 0.002) * 35;
+        const cy = h / 2 + Math.cos(time * 0.0015) * 20;
+        ctx.strokeStyle = '#f59e0b';
+        ctx.lineWidth = 1.8;
+        ctx.strokeRect(cx - 32, cy - 22, 64, 44);
+
+        // REC indicator
+        if (Math.floor(time / 500) % 2 === 0) {
+          ctx.fillStyle = '#ef4444';
+          ctx.beginPath();
+          ctx.arc(26, 26, 5, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.fillStyle = '#f8fafc';
+        ctx.font = '11px monospace';
+        ctx.fillText('REC  00:00:14:22   4K 60FPS   ISO 400   f/2.8', 38, 30);
+        ctx.fillStyle = '#f59e0b';
+        ctx.fillText('AF-C [TRACKING SUBJECT]', cx - 55, cy + 38);
+      }
+
+      requestAnimationFrame(drawFrame);
+    }
+    requestAnimationFrame(drawFrame);
+  </script>
+</body>
+</html>
